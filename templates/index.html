@@ -22,12 +22,11 @@
         <div class="book-call">
             <h3>Book a Call</h3>
             <p>Have questions or want help customizing your bot? Schedule a free call with our team.</p>
-            <a href="https://calendly.com/bradleybushell12" target="_blank">Schedule Now</a>
+            <a href="https://calendly.com/bradleybushell12" target="_blank" class="schedule-call-button">Schedule Now</a>
             <section id="logo-section">
-    <img src="static/images/logo.png" alt="Your Logo" id="logo-under-call">
-</section>
+                <img src="static/images/logo.png" alt="Your Logo" id="logo-under-call">
+            </section>
         </div>
-
 
         <!-- Testimonials column (right side) -->
         <div class="testimonials-column">
@@ -61,7 +60,6 @@
     </div>
 </section>
 
-
     <!-- Chatbot Demo Section -->
     <section class="chatbot-demo">
         <h2>Live Demo</h2>
@@ -74,7 +72,25 @@
         style="position: fixed; bottom: 20px; right: 20px; width: 400px; height: 600px; border: none; z-index: 9999; border-radius: 10px;">
     </iframe>
 
+    <!-- Add the script to handle button click and touch events -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const scheduleButton = document.querySelector('.schedule-call-button');
+
+            // Click event for desktop
+            scheduleButton.addEventListener('click', function() {
+                window.location.href = "https://calendly.com/bradleybushell12"; // The scheduling link
+            });
+
+            // Touch event for mobile
+            scheduleButton.addEventListener('touchstart', function() {
+                window.location.href = "https://calendly.com/bradleybushell12"; // The scheduling link
+            });
+        });
+    </script>
+
 </body>
 </html>
+
 
 
